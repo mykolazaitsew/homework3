@@ -12,9 +12,30 @@ function task1() {
 }
 
 
+function task1bettervariant() {
+    const inputNumber = 15;
+    let result;
+    
+    switch (true) {
+        case inputNumber % 3 === 0 && inputNumber % 5 === 0:
+            result = 'FizzBuzz';
+            break;
+        case inputNumber % 3 === 0:
+            result = 'Fizz';
+            break;
+        case inputNumber % 5 === 0:
+            result = 'Buzz';
+            break;
+        default:
+            result = inputNumber.toString();
+    }
+    return result;
+}
+
+
 function task2() {
     const year = 2024;
-    return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? (year + 'є високосним') : (year + ' не є високосним');
+    return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? (year + ' є високосним') : (year + ' не є високосним');
 }
 
 console.log(task1());
