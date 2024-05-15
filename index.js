@@ -15,6 +15,19 @@ function task2(year) {
 }
 
 
+function task1TemplateString(inputNumber) {
+    return (inputNumber % 3 === 0 && inputNumber % 5 === 0) ? 'FizzBuzz' :
+           (inputNumber % 3 === 0) ? 'Fizz' :
+           (inputNumber % 5 === 0) ? 'Buzz' :
+           'подане число не ділиться';
+}
+
+
+function task2TemplateString(year) {
+    return `${year} ${(year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 'є високосним' : 'не є високосним'}`;
+}
+
+
 function task3(age) {
     let lastCharacter = age.toString().split("").pop();
   
@@ -38,6 +51,8 @@ function task3(age) {
 }
 
 
-console.log(task1(7));
+console.log(task1(15));
 console.log(task2(2024));
 console.log(task3(22));
+console.log(task1TemplateString(15));
+console.log(task2TemplateString(2024));
