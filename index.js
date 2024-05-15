@@ -38,5 +38,35 @@ function task2() {
     return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? (year + ' є високосним') : (year + ' не є високосним');
 }
 
+
+function task3() {
+    const age = '22';
+
+    let lastCharacter = age.toString().split("").pop();
+  
+    switch (lastCharacter) {    
+        case '1':
+            console.log('Вам ' + age + ' рік');
+            break;
+        case '2':
+        case '3':
+        case '4':
+            console.log('Вам ' + age + ' роки');
+            break;
+        case '0':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            console.log('Вам ' + age +  ' років');
+            break;
+        default:
+            console.log('Помилка. Введіть свій вік правильно');
+    }
+}
+
+
 console.log(task1());
 console.log(task2());
+console.log(task3());
