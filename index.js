@@ -16,10 +16,8 @@ function task2(year) {
 
 
 function task1TemplateString(inputNumber) {
-    return (inputNumber % 3 === 0 && inputNumber % 5 === 0) ? 'FizzBuzz' :
-           (inputNumber % 3 === 0) ? 'Fizz' :
-           (inputNumber % 5 === 0) ? 'Buzz' :
-           'подане число не ділиться';
+    let num = (i) => `${i % 3 === 0 ? 'Fizz' : ''}${i % 5 === 0 ? 'Buzz' : ''}` || i;
+    return num(inputNumber);
 }
 
 
@@ -47,7 +45,7 @@ function task3(age) {
             return 'Вам ' + age +  ' років';
         default:
             return 'Помилка. Введіть свій вік правильно';
-    }
+    }  
 }
 
 
